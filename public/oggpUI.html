@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bottom Centered Chatbox with Scrollable Text</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f8e9a1; /* Light Mustard Yellow */
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .input-container {
+      display: flex;
+      padding: 10px;
+      width: 60%;
+      margin-bottom: 30px;
+    }
+
+    .input-box {
+      flex: 1;
+      padding: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px; /* Increase font size */
+      width: 150%; /* Increased width */
+    }
+
+    .send-button {
+      background-color: #ffffff; /* Light Mustard Yellow */
+      color: #333;
+      padding: 18px; /* Same padding as input-box */
+      border: none;
+      border-radius: 8px; /* Same border radius as input-box */
+      cursor: pointer;
+      outline: none;
+      margin-left: 10px;
+      font-size: 14px; /* Decreased font size */
+      height: auto; /* Auto height to match the content */
+    }
+
+    .delete-account {
+      background-color: #ff4d4d; /* Red color */
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      outline: none;
+      margin-bottom:20px;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+
+    .popup-content {
+      margin-bottom: 20px;
+    }
+
+    .confirm-button {
+      background-color: #ff4d4d; /* Red color */
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .cancel-button {
+      background-color: #ccc; /* Gray color */
+      color: #333;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      outline: none;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="input-container">
+  <input type="text" class="input-box" id="messageInput" placeholder="Type your message..." onkeydown="handleKeyPress(event)">
+  <button class="send-button" onclick="sendMessage()">Send</button>
+</div>
+
+<button class="delete-account" onclick="showPopup()">Delete Account</button>
+
+<div class="popup" id="confirmationPopup">
+  <div class="popup-content">Are you sure you want to delete your account?</div>
+  <button class="confirm-button" onclick="deleteAccount()">Yes, Delete</button>
+  <button class="cancel-button" onclick="hidePopup()">Cancel</button>
+</div>
+
+<script>
+  function sendMessage() {
+    const messageInput = document.getElementById('messageInput');
+    const message = messageInput.value.trim();
+
+    if (message !== '') {
+      const messagesContainer = document.getElementById('messages');
+      const messageElement = document.createElement('div');
+      messageElement.className = 'message';
+      messageElement.textContent = message;
+      messagesContainer.appendChild(messageElement);
+
+      // Clear the input field after sending the message
+      messageInput.value = '';
+
+      // Scroll to the bottom to show the latest message
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+  }
+
+  function handleKeyPress(event) {
+    // Check for Shift + Enter
+    if (event.shiftKey && event.key === 'Enter') {
+      // Prevent the default behavior (newline character)
+      event.preventDefault();
+      // Handle your desired action (e.g., add a new line or send the message)
+      // You can add custom logic here based on your requirements.
+    }
+  }
+
+  function showPopup() {
+    const popup = document.getElementById('confirmationPopup');
+    popup.style.display = 'block';
+  }
+
+  function hidePopup() {
+    const popup = document.getElementById('confirmationPopup');
+    popup.style.display = 'none';
+  }
+
+  function deleteAccount() {
+    // Add logic to delete the account
+    alert('Account deleted!');
+    hidePopup(); // Hide the popup after deletion (you can remove this line if not needed)
+  }
+  // Scroll to the bottom by default
+  document.addEventListener('DOMContentLoaded', function() {
+    const messagesContainer = document.getElementById('messages');
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  });
+</script>
+
+</body>
+</html>

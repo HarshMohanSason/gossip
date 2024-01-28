@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login Page</title>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f8e9a1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 40px; /* Increased padding */
+      border-radius: 12px; /* Increased border-radius */
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increased box-shadow */
+      width: 400px; /* Increased width */
+      max-width: 100%; /* Added max-width to make it responsive */
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px; /* Increased padding */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 14px; /* Increased padding */
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px; /* Add margin-top to separate it from the input */
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="login-container">
+  <h2>Login/Sign-up</h2>
+  <form onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username">
+    </div>
+    <div class="form-group">
+      <label for="collegeEmail">College Email:</label>
+      <input type="email" id="collegeEmail" name="collegeEmail" placeholder="Enter your college email">
+      <span class="error-message" id="emailError"></span>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<script src="configure.js"> </script>
+
+</body>
+</html>
