@@ -1,0 +1,98 @@
+[debug] [2024-01-28T06:35:36.029Z] ----------------------------------------------------------------------
+[debug] [2024-01-28T06:35:36.031Z] Command:       /usr/local/bin/firebase /Users/patron/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2024-01-28T06:35:36.031Z] CLI Version:   13.0.3
+[debug] [2024-01-28T06:35:36.032Z] Platform:      darwin
+[debug] [2024-01-28T06:35:36.032Z] Node Version:  v18.5.0
+[debug] [2024-01-28T06:35:36.041Z] Time:          Sat Jan 27 2024 22:35:36 GMT-0800 (Pacific Standard Time)
+[debug] [2024-01-28T06:35:36.041Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-28T06:35:36.156Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-28T06:35:36.157Z] > authorizing via signed-in user (harshsason2000@gmail.com)
+[debug] [2024-01-28T06:35:36.157Z] [iam] checking project gossip-4cbb8 for permissions ["firebase.projects.get"]
+[debug] [2024-01-28T06:35:36.158Z] > refreshing access token with scopes: []
+[debug] [2024-01-28T06:35:36.160Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-28T06:35:36.160Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-28T06:35:36.858Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-01-28T06:35:36.859Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-28T06:35:36.873Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/gossip-4cbb8:testIamPermissions [none]
+[debug] [2024-01-28T06:35:36.873Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/gossip-4cbb8:testIamPermissions x-goog-quota-user=projects/gossip-4cbb8
+[debug] [2024-01-28T06:35:36.873Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gossip-4cbb8:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-01-28T06:35:37.205Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/gossip-4cbb8:testIamPermissions 200
+[debug] [2024-01-28T06:35:37.205Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/gossip-4cbb8:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-01-28T06:35:37.206Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8 [none]
+[debug] [2024-01-28T06:35:37.734Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8 200
+[debug] [2024-01-28T06:35:37.735Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8 {"projectId":"gossip-4cbb8","projectNumber":"641292463940","displayName":"gossip","name":"projects/gossip-4cbb8","resources":{"hostingSite":"gossip-4cbb8","realtimeDatabaseInstance":"gossip-4cbb8-default-rtdb"},"state":"ACTIVE","etag":"1_eb08a049-0b36-4a1a-be51-b1d1159655f9"}
+[info] 
+[info] === Serving from '/Users/patron/Documents/OGGY'...
+[info] 
+[debug] [2024-01-28T06:35:37.743Z] defaultcredentials: writing to file /Users/patron/.config/firebase/harshsason2000_gmail_com_application_default_credentials.json
+[debug] [2024-01-28T06:35:37.743Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/gossip-4cbb8/sites 
+[debug] [2024-01-28T06:35:37.748Z] Setting GAC to /Users/patron/.config/firebase/harshsason2000_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/patron/.config/firebase/harshsason2000_gmail_com_application_default_credentials.json"}}
+[debug] [2024-01-28T06:35:37.748Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8/adminSdkConfig [none]
+[debug] [2024-01-28T06:35:38.044Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8/adminSdkConfig 200
+[debug] [2024-01-28T06:35:38.045Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8/adminSdkConfig {"projectId":"gossip-4cbb8","databaseURL":"https://gossip-4cbb8-default-rtdb.firebaseio.com","storageBucket":"gossip-4cbb8.appspot.com"}
+[debug] [2024-01-28T06:35:38.354Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/gossip-4cbb8/sites 200
+[debug] [2024-01-28T06:35:38.355Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/gossip-4cbb8/sites {"sites":[{"name":"projects/gossip-4cbb8/sites/gossip-4cbb8","defaultUrl":"https://gossip-4cbb8.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-01-28T06:35:38.355Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8/webApps/-/config [none]
+[debug] [2024-01-28T06:35:38.859Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8/webApps/-/config 200
+[debug] [2024-01-28T06:35:38.860Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8/webApps/-/config {"projectId":"gossip-4cbb8","appId":"1:641292463940:web:b9de1342763f4ed5ea7111","databaseURL":"https://gossip-4cbb8-default-rtdb.firebaseio.com","storageBucket":"gossip-4cbb8.appspot.com","apiKey":"AIzaSyCKbdTL5stdNTPl9jnPwThsQZXUtO-KOPg","authDomain":"gossip-4cbb8.firebaseapp.com","messagingSenderId":"641292463940","measurementId":"G-13QRB4RL2Q"}
+[debug] [2024-01-28T06:35:38.868Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8 [none]
+[debug] [2024-01-28T06:35:39.135Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8 200
+[debug] [2024-01-28T06:35:39.136Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/gossip-4cbb8 {"projectId":"gossip-4cbb8","projectNumber":"641292463940","displayName":"gossip","name":"projects/gossip-4cbb8","resources":{"hostingSite":"gossip-4cbb8","realtimeDatabaseInstance":"gossip-4cbb8-default-rtdb"},"state":"ACTIVE","etag":"1_eb08a049-0b36-4a1a-be51-b1d1159655f9"}
+[info] i  functions: Watching "/Users/patron/Documents/OGGY/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/patron/Documents/OGGY/functions\" for Cloud Functions..."}}
+[info] i  hosting[gossip-4cbb8]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[gossip-4cbb8]: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2024-01-28T06:35:39.263Z] Customer code is not Node
+[debug] [2024-01-28T06:35:39.265Z] Validating python source
+[debug] [2024-01-28T06:35:39.265Z] Building python source
+[debug] [2024-01-28T06:35:39.266Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-01-28T06:35:39.273Z] Running command with virtualenv: command=., args=["\"/Users/patron/Documents/OGGY/functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-01-28T06:35:39.398Z] stderr: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'firebase_functions'
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. "/Users/patron/Documents/OGGY/functions/venv/bin/activate" && python3.11 -m pip install -r requirements.txt'? {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. \"/Users/patron/Documents/OGGY/functions/venv/bin/activate\" && python3.11 -m pip install -r requirements.txt'?"}}
+[debug] [2024-01-28T08:03:56.159Z] File /Users/patron/Documents/OGGY/functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patron/Documents/OGGY/functions/main.py changed, reloading triggers"}}
+[debug] [2024-01-28T08:03:57.168Z] Customer code is not Node
+[debug] [2024-01-28T08:03:57.168Z] Validating python source
+[debug] [2024-01-28T08:03:57.168Z] Building python source
+[debug] [2024-01-28T08:03:57.170Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-01-28T08:03:57.172Z] Running command with virtualenv: command=., args=["\"/Users/patron/Documents/OGGY/functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-01-28T08:03:57.346Z] stderr: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'firebase_functions'
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. "/Users/patron/Documents/OGGY/functions/venv/bin/activate" && python3.11 -m pip install -r requirements.txt'? {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. \"/Users/patron/Documents/OGGY/functions/venv/bin/activate\" && python3.11 -m pip install -r requirements.txt'?"}}
+[debug] [2024-01-28T08:05:17.125Z] File /Users/patron/Documents/OGGY/functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patron/Documents/OGGY/functions/main.py changed, reloading triggers"}}
+[debug] [2024-01-28T08:05:18.126Z] Customer code is not Node
+[debug] [2024-01-28T08:05:18.127Z] Validating python source
+[debug] [2024-01-28T08:05:18.127Z] Building python source
+[debug] [2024-01-28T08:05:18.128Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-01-28T08:05:18.130Z] Running command with virtualenv: command=., args=["\"/Users/patron/Documents/OGGY/functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-01-28T08:05:18.301Z] stderr: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'firebase_functions'
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. "/Users/patron/Documents/OGGY/functions/venv/bin/activate" && python3.11 -m pip install -r requirements.txt'? {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. \"/Users/patron/Documents/OGGY/functions/venv/bin/activate\" && python3.11 -m pip install -r requirements.txt'?"}}
+[debug] [2024-01-28T08:26:03.847Z] File /Users/patron/Documents/OGGY/functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patron/Documents/OGGY/functions/main.py changed, reloading triggers"}}
+[debug] [2024-01-28T08:26:04.856Z] Customer code is not Node
+[debug] [2024-01-28T08:26:04.857Z] Validating python source
+[debug] [2024-01-28T08:26:04.857Z] Building python source
+[debug] [2024-01-28T08:26:04.859Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-01-28T08:26:04.864Z] Running command with virtualenv: command=., args=["\"/Users/patron/Documents/OGGY/functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-01-28T08:26:05.033Z] stderr: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'firebase_functions'
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. "/Users/patron/Documents/OGGY/functions/venv/bin/activate" && python3.11 -m pip install -r requirements.txt'? {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. \"/Users/patron/Documents/OGGY/functions/venv/bin/activate\" && python3.11 -m pip install -r requirements.txt'?"}}
+[debug] [2024-01-28T08:37:06.698Z] File /Users/patron/Documents/OGGY/functions/userDetails.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/patron/Documents/OGGY/functions/userDetails.py changed, reloading triggers"}}
+[debug] [2024-01-28T08:37:07.699Z] Customer code is not Node
+[debug] [2024-01-28T08:37:07.700Z] Validating python source
+[debug] [2024-01-28T08:37:07.700Z] Building python source
+[debug] [2024-01-28T08:37:07.700Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-01-28T08:37:07.701Z] Running command with virtualenv: command=., args=["\"/Users/patron/Documents/OGGY/functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-01-28T08:37:07.893Z] stderr: Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'firebase_functions'
+
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. "/Users/patron/Documents/OGGY/functions/venv/bin/activate" && python3.11 -m pip install -r requirements.txt'? {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Failed to find location of Firebase Functions SDK. Did you forget to run '. \"/Users/patron/Documents/OGGY/functions/venv/bin/activate\" && python3.11 -m pip install -r requirements.txt'?"}}
